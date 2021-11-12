@@ -51,6 +51,6 @@ public class AppConfiguration {
 
   @Bean
   public CacheControlInstrumentation cacheControlInstrumentation() {
-      return new CacheControlInstrumentation();
+    return new CacheControlInstrumentation();
   }
 }
