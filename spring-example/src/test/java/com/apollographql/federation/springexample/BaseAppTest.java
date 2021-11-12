@@ -19,5 +19,7 @@ public class BaseAppTest {
     assertEquals(8658, quantity, "Inventory contains 8658 Plancks");
     final String federatedTrace = response.get("$.extensions.ftv1", String.class);
     assertNotNull(federatedTrace, "response should not have had null federated trace");
+    final String cacheControl = response.get("$.extensions.cache-control", String.class);
+    assertEquals("max-age=60, public", cacheControl);
   }
 }
